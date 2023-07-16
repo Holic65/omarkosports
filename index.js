@@ -7,7 +7,7 @@ const app = express();
 const athleticRoute = require('./routes/athletic')
 const skyRoute = require('./routes/sky')
 const telegraphRoute = require('./routes/telegraph')
-const footballRoute = require('./routes/Football')
+const footballRoute = require('./routes/football')
 const homeRoute = require('./routes/home')
 
 app.use(express.static('public'));
