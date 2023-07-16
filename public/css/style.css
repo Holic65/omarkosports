@@ -1,0 +1,134 @@
+* {
+    /* padding: 0; */
+    /* margin: 0;  */
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    background-color: #212529;
+    font: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: -8px;
+    height: 50px;
+}
+
+
+.navbar a {
+    color: #E0E0E0;
+    text-decoration: none;
+
+
+}
+
+.heading h1 {
+    font-weight: 500;
+    padding: 10px;
+}
+
+.logo {
+    font-weight: 200;
+}
+
+.sports {
+    display: block;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+.navbar-nav {
+    padding: 10px;
+}
+
+.nav-item {
+    padding: 5px;
+}
+
+.sports a.active,
+.sports a:hover {
+    color: rgb(182, 182, 182);
+}
+
+.outlets {
+    background-color: #D6D6D6;
+    text-align: center;
+    margin: 0px -8px;
+    padding: 7px;
+    padding-top: 15px;
+    height: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid;
+    font-weight: 500;
+    color: #212529;
+}
+
+.outlets a {
+    padding: 2px;
+    text-decoration: underline;
+    color: #212529;
+}
+
+.headlines {
+    margin: 40px 0px;
+}
+
+.headlines h1 {
+    margin-top: 40px;
+}
+
+button {
+    text-justify: center;
+}
+
+.morebtn {
+    color: #E0E0E0;
+    background-color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 16px;
+    padding: 6px 12px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+
+}
+
+.morebtn a {
+    text-decoration: none;
+    color: #E0E0E0;
+}
+
+.morebtn:hover {
+    background-color: #474747;
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+.theathletic {
+    margin-top: 20px;
+}
+
+h4 a{
+    text-decoration: none;
+    color: #212529;
+}
+
+.theathletic a.activ, .theathletic a:hover {
+    text-decoration: none;
+    /* color: #474747; */
+    border-bottom: 1px solid;
+}
