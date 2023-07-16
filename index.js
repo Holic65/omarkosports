@@ -1,8 +1,7 @@
-const PORT = 8000;
+const PORT = 3000;
 const express = require('express');
 const expbs = require('express-handlebars');
-const axios = require('axios');
-const cheerio = require('cheerio');
+
 
 const app = express();
 const athleticRoute = require('./routes/athletic')
@@ -24,21 +23,6 @@ app.use('/skysports', skyRoute)
 app.use('/thetelegraph', telegraphRoute)
 app.use('/football', footballRoute)
 app.use('/', homeRoute)
-
-
-
-const sportsblogs = [
-    {
-        name: 'theathletic',
-        address: 'https://theathletic.com/football/team/arsenal/'
-    },
-    {
-        name: 'telegraph',
-        address: 'https://www.telegraph.co.uk/premier-league/'
-    }
-]
-const articles = [];
-
 
 
 
