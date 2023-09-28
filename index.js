@@ -81,4 +81,4 @@ const articles = [];
 
 
 
-app.listen(PORT, () => console.log('server running on PORT 8000'))
+app.listen(PORT, '0.0.0.0', () => console.log('server running on PORT 8000'))
