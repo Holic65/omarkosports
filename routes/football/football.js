@@ -1,6 +1,6 @@
 const express = require('express');
 const router =  express.Router();
-const homegen = require('../apigen/homegen')
+const homegen = require('../../apigen/football/homegen')
 
 router.get('/', (req, res) => {
 

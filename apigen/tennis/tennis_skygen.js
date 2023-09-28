@@ -1,22 +1,25 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function skygen() {
+function f1skygen() {
     return new Promise((resolve, reject) => {
         const article = [];
+        // .grid__col site-layout-secondary__col1
 
-        axios.get('https://www.skysports.com/football')
+        axios.get('https://www.skysports.com/tennis')
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
 
-            $('a:contains("Arsenal")', html).each(function () {
+            $('a > span', html).each(function () {
                 const title = $(this).text();
                 const url = $(this).attr('href');
-                article.push({
-                    title,
-                    url
-                });
+                if (title.length > 50 && !title.includes('<')) {
+                    article.push({
+                        title,
+                        url
+                    })
+                }
             });
             resolve(article);
         })
@@ -28,4 +31,4 @@ function skygen() {
 
 
 
-module.exports = skygen;
+module.exports = f1skygen;

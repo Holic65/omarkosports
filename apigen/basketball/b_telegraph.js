@@ -1,22 +1,26 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function telegraphgen() {
+function b_telegraphgen() {
     return new Promise((resolve, reject) => {
         const article = [];
 
-        axios.get('https://www.telegraph.co.uk/football/')
+        axios.get('https://www.telegraph.co.uk/basketball/')
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
-
-            $('a:contains("Arsenal")', html).each(function () {
+            let i = 0
+            $('#main-content a span', html).each(function () {
                 const title = $(this).text();
                 const url = $(this).attr('href');
-                article.push({
-                    title,
-                    url
-                });
+
+                if (i % 2 !== 0 && title.length > 50) {
+                    article.push({
+                        title,
+                        url
+                    });
+                }
+                i++;
             });
             resolve(article);
         })
@@ -28,4 +32,4 @@ function telegraphgen() {
 
 
 
-module.exports = telegraphgen;
+module.exports = b_telegraphgen;

@@ -1,6 +1,6 @@
 const express = require('express');
 const router =  express.Router();
-const telegraphgen = require('../apigen/telegraph')
+const telegraphgen = require('../../apigen/football/telegraph')
 
 router.get('/', (req, res) => {
     telegraphgen()

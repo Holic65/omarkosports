@@ -1,17 +1,17 @@
 {{> header}}
 <div class="headlines">
-
     <div class="theathletic">
         <h1>TheAthletic</h1>
-        {{#if data}}
-            {{#each data}}
-                <h4><a href="{{url}}">{{title}}</a></h4>
-            {{/each}}
+        {{#if athletic}}
+        {{#each athletic}}
+        <h4><a href="{{url}}">{{title}}</a></h4>
+        {{/each}}
         {{else}}
-            <h1>No headlinex found</h1>
+        <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="theathletic">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="f1-athletic">VIEW MORE</a></button>
     </div>
+
 
 
     <div class="theathletic">
@@ -23,10 +23,10 @@
         {{else}}
         <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="skysports">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="f1-skysports">VIEW MORE</a></button>
     </div>
-    
-    
+
+
     <div class="theathletic">
         <h1>TheTelegraph</h1>
         {{#if telegraph}}
@@ -36,8 +36,8 @@
         {{else}}
         <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="thetelegraph">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="f1-telegraph">VIEW MORE</a></button>
     </div>
 
-    
+
 </div>

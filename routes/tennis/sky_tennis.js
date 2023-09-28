@@ -1,14 +1,14 @@
 const express = require('express');
 const router =  express.Router();
-const athleticgen = require('../apigen/athleticgen')
+const athleticgen = require('../../apigen/tennis/tennis_skygen')
 
 router.get('/', (req, res) => {
 
     athleticgen()
         .then((article) => {
-            res.render('athletic', { article })
+            res.render('tennis_sky', { article })
         }).catch((err) => {
-            res.render('athletic', { msg: 'No Headlines Found'});
+            res.render('tennis_sky', { msg: 'No Headlines Found'});
         });    
 })
 

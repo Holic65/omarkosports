@@ -1,9 +1,9 @@
-const athleticgen = require('../apigen/athleticgen')
-const skygen = require('../apigen/skygen');
-const telegraphgen = require('./telegraph');
+const b_athleticgen = require('./b_athleticgen')
+const b_skygen = require('./b_skygen');
+const b_telegraphgen = require('./b_telegraph');
 
 
-function homegen() {
+function basketballgen() {
     return new Promise((resolve, reject) => {
         let allarticle = {
             athleticarticle: [],
@@ -11,14 +11,14 @@ function homegen() {
             telegrapharticle: []
         };
 
-        athleticgen()
+        b_athleticgen()
             .then((article) => {
                 allarticle.athleticarticle.push(...article);
-                return skygen();
+                return b_skygen();
             })
             .then((article) => {
                 allarticle.skyarticle.push(...article);
-                return telegraphgen()
+                return b_telegraphgen()
             })
             .then((article) =>{
                 allarticle.telegrapharticle.push(...article);
@@ -30,4 +30,4 @@ function homegen() {
     });
 }
 
-module.exports = homegen
+module.exports = basketballgen

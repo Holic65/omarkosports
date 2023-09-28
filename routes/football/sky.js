@@ -1,6 +1,6 @@
 const express = require('express');
 const router =  express.Router();
-const skygen = require('../apigen/skygen')
+const skygen = require('../../apigen/football/skygen')
 
 router.get('/', (req, res) => {
     skygen()
