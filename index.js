@@ -11,6 +11,8 @@ app.engine('hbs', expbs.engine({
     extname: '.hbs'
 }));
 app.set('view engine', 'hbs')
+expbs.cache({}, true); 
+
 
 // -----------------------start of import for football route ----------------------
 
