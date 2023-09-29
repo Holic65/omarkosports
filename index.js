@@ -5,6 +5,12 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const app = express();
+app.use(express.static('public'));
+app.engine('hbs', expbs.engine({
+    defaultLayout: 'main',
+    extname: '.hbs'
+}));
+app.set('view engine', 'hbs')
 
 // -----------------------start of import for football route ----------------------
 
@@ -33,14 +39,6 @@ const tennis_route = require('./routes/tennis/tennis')
 const tennis_athleticRoute = require('./routes/tennis/athletic_tennis')
 const tennis_skyRoute = require('./routes/tennis/sky_tennis')
 const tennis_telegraphRoute = require('./routes/tennis/telegraph_tennis')
-
-app.use(express.static('public'));
-app.engine('hbs', expbs.engine({
-    defaultLayout: 'main',
-    extname: '.hbs'
-}));
-app.set('view engine', 'hbs')
-
 
 app.use('/theathletic', athleticRoute);
 app.use('/skysports', skyRoute)
