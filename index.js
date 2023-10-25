@@ -11,7 +11,6 @@ app.engine('hbs', expbs.engine({
     extname: '.hbs'
 }));
 app.set('view engine', 'hbs')
-expbs.cache({}, true); 
 
 
 // -----------------------start of import for football route ----------------------
@@ -64,7 +63,7 @@ app.use('/tennis-skysports', tennis_skyRoute)
 app.use('/tennis-telegraph', tennis_telegraphRoute)
 
 
-
+// app.use('/tennis/athletic')
 
 const sportsblogs = [
     {
