@@ -3,7 +3,7 @@ const tennis_skygen = require('./tennis_skygen');
 const tennis_telegraphgen = require('./tennis_telegraphgen');
 
 
-function f1gen() {
+function tennis_gen() {
     return new Promise((resolve, reject) => {
         let allarticle = {
             athleticarticle: [],
@@ -30,4 +30,4 @@ function f1gen() {
     });
 }
 
-module.exports = f1gen
+module.exports = tennis_gen

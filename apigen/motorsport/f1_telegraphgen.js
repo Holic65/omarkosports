@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function f1telegraphgen() {
+function f1_telegraphgen() {
     return new Promise((resolve, reject) => {
         const article = [];
 
@@ -10,17 +10,19 @@ function f1telegraphgen() {
             const html = response.data;
             const $ = cheerio.load(html);
             let i = 0
-            $('#main-content a span', html).each(function () {
+            $('#main-content a', html).each(function () {
                 const title = $(this).text();
-                const url = $(this).attr('href');
+                let url = $(this).attr('href');
 
-                if (i % 2 !== 0 && title.length > 50) {
+                url = url.trim()
+
+                if (url.substring(0, 10) == '/formula-1' && title.length > 10) {
+                    url = 'https://www.telegraph.co.uk' + url
                     article.push({
                         title,
                         url
                     });
                 }
-                i++;
             });
             resolve(article);
         })
@@ -32,4 +34,4 @@ function f1telegraphgen() {
 
 
 
-module.exports = f1telegraphgen;
+module.exports = f1_telegraphgen;

@@ -2,11 +2,11 @@
 
 <div class="headlines">
 
-    <div class="theathletic">
+    <div class="news-tab">
         <h1>TheAthletic</h1>
         {{#if article}}
             {{#each article}}
-                <h4><a href="{{url}}">{{title}}</a></h4>
+                <h4><a href="{{url}}" target="_blank">{{title}}</a></h4>
             {{/each}}
         {{else}}
             <h1>No headline found</h1>

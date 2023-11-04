@@ -1,43 +1,43 @@
 {{> header}}
 <div class="headlines">
 
-    <div class="theathletic">
+    <div class="news-tab">
         <h1>TheAthletic</h1>
         {{#if athletic}}
             {{#each athletic}}
-                <h4><a href="{{url}}">{{title}}</a></h4>
+                <h4><a href="{{url}}" target="_blank">{{title}}</a></h4>
             {{/each}}
         {{else}}
             <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="theathletic">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="/football/theathletic">VIEW MORE</a></button>
     </div>
 
 
 
-    <div class="theathletic">
+    <div class="news-tab">
         <h1>SkySports</h1>
         {{#if sky}}
             {{#each sky}}
-                <h4><a href="{{url}}">{{title}}</a></h4>
+                <h4><a href="{{url}}" target="_blank">{{title}}</a></h4>
             {{/each}}
         {{else}}
             <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="skysports">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="/football/skysports">VIEW MORE</a></button>
     </div>
 
 
-    <div class="theathletic">
+    <div class="news-tab">
         <h1>TheTelegraph</h1>
         {{#if telegraph}}
             {{#each telegraph}}
-                <h4><a href="{{url}}">{{title}}</a></h4>
+                <h4><a href="{{url}}" target="_blank">{{title}}</a></h4>
             {{/each}}
         {{else}}
             <h1>No headline found</h1>
         {{/if}}
-        <button type="button" class="morebtn"><a href="thetelegraph">VIEW MORE</a></button>
+        <button type="button" class="morebtn"><a href="/football/telegraph">VIEW MORE</a></button>
     </div>
 
 

@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function f1skygen() {
+function f1_skygen() {
     return new Promise((resolve, reject) => {
         const article = [];
         axios.get('https://www.skysports.com/f1')
@@ -29,4 +29,4 @@ function f1skygen() {
 
 
 
-module.exports = f1skygen;
+module.exports = f1_skygen;

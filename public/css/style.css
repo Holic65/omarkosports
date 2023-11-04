@@ -118,7 +118,7 @@ button {
     text-decoration: none;
 }
 
-.theathletic {
+.news-tab {
     margin-top: 20px;
 }
 
@@ -127,7 +127,7 @@ h4 a{
     color: #212529;
 }
 
-.theathletic a.activ, .theathletic a:hover {
+.news-tab a.activ, .news-tab a:hover {
     text-decoration: none;
     /* color: #474747; */
     border-bottom: 1px solid;

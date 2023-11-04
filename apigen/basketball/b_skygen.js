@@ -4,17 +4,21 @@ const cheerio = require('cheerio');
 function b_skygen() {
     return new Promise((resolve, reject) => {
         const article = [];
-        // .grid__col site-layout-secondary__col1
 
         axios.get('https://www.skysports.com/nba')
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
 
-            $('a > span', html).each(function () {
+            $('a', html).each(function () {
                 const title = $(this).text();
-                const url = $(this).attr('href');
-                if (title.length > 50 && !title.includes('<')) {
+                let url = $(this).attr('href');
+                
+                if (url[0] == '/') {
+                    url = 'https://www.skysports.com' + url
+                }
+
+                if (title.length > 50 && !title.includes('<') && url.length > 30) {
                     article.push({
                         title,
                         url

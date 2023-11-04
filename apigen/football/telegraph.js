@@ -10,17 +10,18 @@ function telegraphgen() {
             const html = response.data;
             const $ = cheerio.load(html);
             let i = 0
-            $('#main-content a span', html).each(function () {
+            $('#main-content a', html).each(function () {
                 const title = $(this).text();
-                const url = $(this).attr('href');
+                let url = $(this).attr('href');
+                url = url.trim()
 
-                if (i % 2 !== 0 && title.length > 50) {
+                if (url.substring(0, 9) == '/football' && title.length > 10 && url.length > 30) {
+                    url = 'https://www.telegraph.co.uk' + url
                     article.push({
                         title,
                         url
                     });
                 }
-                i++;
             });
             resolve(article);
         })

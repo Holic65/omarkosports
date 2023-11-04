@@ -1,10 +1,10 @@
 const express = require('express');
 const router =  express.Router();
-const athleticgen = require('../../apigen/tennis/tennis_telegraphgen')
+const telegraphgen = require('../../apigen/tennis/tennis_telegraphgen')
 
 router.get('/', (req, res) => {
 
-    athleticgen()
+    telegraphgen()
         .then((article) => {
             res.render('tennis_telegraph', { article })
         }).catch((err) => {

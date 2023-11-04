@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 
-function f1athleticgen() {
+function tennis_athleticgen() {
     return new Promise((resolve, reject) => {
         const article = [];
 
@@ -30,4 +30,4 @@ function f1athleticgen() {
 }
 
 
-module.exports = f1athleticgen;
+module.exports = tennis_athleticgen;

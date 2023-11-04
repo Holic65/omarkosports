@@ -1,9 +1,9 @@
-const f1athleticgen = require('./f1_athleticgen')
-const f1skygen = require('./f1_skygen');
-const f1telegraphgen = require('./f1_telegraphgen');
+const f1_athleticgen = require('./f1_athleticgen')
+const f1_skygen = require('./f1_skygen');
+const f1_telegraphgen = require('./f1_telegraphgen');
 
 
-function f1gen() {
+function f1_gen() {
     return new Promise((resolve, reject) => {
         let allarticle = {
             athleticarticle: [],
@@ -11,14 +11,14 @@ function f1gen() {
             telegrapharticle: []
         };
 
-        f1athleticgen()
+        f1_athleticgen()
             .then((article) => {
                 allarticle.athleticarticle.push(...article);
-                return f1skygen();
+                return f1_skygen();
             })
             .then((article) => {
                 allarticle.skyarticle.push(...article);
-                return f1telegraphgen()
+                return f1_telegraphgen()
             })
             .then((article) =>{
                 allarticle.telegrapharticle.push(...article);
@@ -30,4 +30,4 @@ function f1gen() {
     });
 }
 
-module.exports = f1gen
+module.exports = f1_gen

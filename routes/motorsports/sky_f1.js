@@ -1,10 +1,10 @@
 const express = require('express');
 const router =  express.Router();
-const athleticgen = require('../../apigen/motorsport/f1_skygen')
+const skygen = require('../../apigen/motorsport/f1_skygen')
 
 router.get('/', (req, res) => {
 
-    athleticgen()
+    skygen()
         .then((article) => {
             res.render('f1_sky', { article })
         }).catch((err) => {
