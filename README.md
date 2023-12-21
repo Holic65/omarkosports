@@ -1,2 +1,2 @@
-OMARKOSPORTSBLOG is my final alx project really excited for what the future holds ;)
-
+OMARKOSPORTSBLOG is a sports blog website that brings sports headlines from different websites to one place
+**Check it out https://omarkosports.onrender.com/**
